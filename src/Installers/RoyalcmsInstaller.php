@@ -67,7 +67,7 @@ class RoyalcmsInstaller extends BaseInstaller
     protected function inflectSystemVars($vars)
     {
         $vars['name'] = preg_replace('/^system-|-system/', '', $vars['name']);
-
+        
         return $vars;
     }
 

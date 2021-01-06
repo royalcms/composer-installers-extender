@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Royalcms\Composer\ComposerInstallersExtender\Installers;
+namespace Royalcms\Composer\ComposerInstallersExtender\CustomInstallers;
 
 use Composer\Installers\BaseInstaller;
 
@@ -15,4 +15,5 @@ use Composer\Installers\BaseInstaller;
  */
 class CustomInstaller extends BaseInstaller
 {
+    
 }
