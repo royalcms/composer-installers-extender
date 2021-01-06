@@ -11,6 +11,15 @@ use Composer\Installers\Installer as InstallerBase;
 class Installer extends InstallerBase
 {
     /**
+     * Package types to installer class map
+     *
+     * @var array
+     */
+    private $supportedTypes = [
+        'royalcms' => 'RoyalcmsInstaller'
+    ];
+
+    /**
      * A list of installer types.
      *
      * @var array
@@ -22,6 +31,15 @@ class Installer extends InstallerBase
      */
     public function getInstallPath(PackageInterface $package): string
     {
+        $type = $package->getType();
+        $frameworkType = $this->findFrameworkType($type);
+        
+        if ($frameworkType = 'royalcms') {
+            $class = __NAMESPACE__ . $this->supportedTypes[$frameworkType];
+            $installer = new $class($package, $this->composer, $this->getIO());
+            return $installer->getInstallPath($package, $frameworkType);
+        }
+
         $installer = new CustomInstaller($package, $this->composer, $this->io);
         $path = $installer->getInstallPath($package, $package->getType());
 
