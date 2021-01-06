@@ -1,5 +1,5 @@
 {
-    "name": "oomphinc/composer-installers-extender",
+    "name": "royalcms/composer-installers-extender",
     "description": "Extend the composer/installers plugin to accept any arbitrary package type.",
     "homepage": "http://www.oomphinc.com/",
     "type": "composer-plugin",
@@ -14,6 +14,11 @@
             "name": "Nathan Dentzau",
             "email": "nate@oomphinc.com",
             "homepage": "http://oomph.is/ndentzau"
+        },
+        {
+            "name": "Royal Wang",
+            "email": "hxroyal@gmail.com",
+            "homepage": "https://royalcms.cn"
         }
     ],
     "support": {
@@ -31,12 +36,12 @@
     },
     "autoload":{
         "psr-4": {
-            "OomphInc\\ComposerInstallersExtender\\": "src/"
+            "Royalcms\\Composer\\ComposerInstallersExtender\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "OomphInc\\ComposerInstallerExtender\\Tests\\": "tests/src/"
+            "Royalcms\\Composer\\ComposerInstallerExtender\\Tests\\": "tests/src/"
         }
     },
     "scripts": {
@@ -48,7 +53,7 @@
         "sort-packages": true
     },
     "extra": {
-        "class": "OomphInc\\ComposerInstallersExtender\\Plugin"
+        "class": "Royalcms\\Composer\\ComposerInstallersExtender\\Plugin"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
