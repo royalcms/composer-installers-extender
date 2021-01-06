@@ -34,7 +34,7 @@ class Installer extends InstallerBase
         $type = $package->getType();
         $frameworkType = $this->findFrameworkType($type);
 
-        if ($frameworkType = 'royalcms') {
+        if (in_array($frameworkType, array_keys($this->supportedTypes))) {
             $class = __NAMESPACE__ . '\\' . $this->supportedTypes[$frameworkType];
             $installer = new $class($package, $this->composer, $this->io);
             return $installer->getInstallPath($package, $frameworkType);
@@ -51,6 +51,12 @@ class Installer extends InstallerBase
      */
     public function supports($packageType): bool
     {
+        $frameworkType = $this->findFrameworkType($packageType);
+
+        if (in_array($frameworkType, array_keys($this->supportedTypes))) {
+            return parent::supports($packageType);
+        }
+
         return in_array($packageType, $this->getInstallerTypes());
     }
 
