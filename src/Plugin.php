@@ -7,7 +7,6 @@ namespace Royalcms\Composer\ComposerInstallersExtender;
 use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Plugin\PluginInterface;
-use Royalcms\Composer\ComposerInstallersExtender\Installers\Installer;
 
 class Plugin implements PluginInterface
 {
@@ -16,8 +15,11 @@ class Plugin implements PluginInterface
      */
     public function activate(Composer $composer, IOInterface $io): void
     {
-        $installer = new Installer($io, $composer);
+        $installer = new Installers\Installer($io, $composer);
         $composer->getInstallationManager()->addInstaller($installer);
+        
+        $custom_installer = new CustomInstallers\Installer($io, $composer);
+        $composer->getInstallationManager()->addInstaller($custom_installer);
     }
 
     /**
