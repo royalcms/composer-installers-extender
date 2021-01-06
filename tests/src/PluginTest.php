@@ -2,14 +2,14 @@
 
 declare(strict_types = 1);
 
-namespace OomphInc\ComposerInstallersExtender\Tests;
+namespace Royalcms\Composer\ComposerInstallersExtender\Tests;
 
 use Composer\Composer;
 use Composer\IO\IOInterface;
 use PHPUnit\Framework\TestCase;
 use Composer\Installer\InstallationManager;
-use OomphInc\ComposerInstallersExtender\Installers\Installer;
-use OomphInc\ComposerInstallersExtender\Plugin;
+use Royalcms\Composer\ComposerInstallersExtender\Installers\Installer;
+use Royalcms\Composer\ComposerInstallersExtender\Plugin;
 
 class PluginTest extends TestCase
 {
