@@ -2,12 +2,12 @@
 
 declare(strict_types = 1);
 
-namespace OomphInc\ComposerInstallersExtender;
+namespace Royalcms\Composer\ComposerInstallersExtender;
 
 use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Plugin\PluginInterface;
-use OomphInc\ComposerInstallersExtender\Installers\Installer;
+use Royalcms\Composer\ComposerInstallersExtender\Installers\Installer;
 
 class Plugin implements PluginInterface
 {

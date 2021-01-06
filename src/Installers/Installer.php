@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace OomphInc\ComposerInstallersExtender\Installers;
+namespace Royalcms\Composer\ComposerInstallersExtender\Installers;
 
 use Composer\Package\PackageInterface;
 use Composer\Installer\LibraryInstaller;

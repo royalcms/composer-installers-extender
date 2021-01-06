@@ -2,10 +2,10 @@
 
 declare(strict_types = 1);
 
-namespace OomphInc\ComposerInstallersExtender\Tests\Installers;
+namespace Royalcms\Composer\ComposerInstallersExtender\Tests\Installers;
 
 use PHPUnit\Framework\TestCase;
-use OomphInc\ComposerInstallersExtender\Installers\CustomInstaller;
+use Royalcms\Composer\ComposerInstallersExtender\Installers\CustomInstaller;
 
 class CustomInstallerTest extends TestCase
 {
